@@ -1,33 +1,47 @@
 // src/components/sections/WhoShouldJoinSection.js
 import Image from 'next/image';
 
-const JoinCard = ({ title, iconSrc }) => (
-    <div className="flex items-center gap-4 rounded-2xl bg-white p-8 shadow-lg">
-        <Image src={iconSrc} alt={title} width={64} height={64} />
-        <span className="text-lg font-bold">{title}</span>
-    </div>
-);
+const WhoShouldJoinSection = () => {
+  return (
+   // Mengubah background utama menjadi putih dan menjadikannya relative container
+   <section className="relative py-20">
+   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[500px] bg-brand-purple opacity-80 blur-3xl rounded-full z-0"></div>
 
-export default function WhoShouldJoinSection() {
-    return (
-        <section className="px-4 py-20 text-center">
-            <div className="mx-auto max-w-7xl">
-                <h2 className="mb-12 text-4xl font-bold text-purple-600">Who Should Join?</h2>
-                <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-2">
-                    {/* Ganti iconSrc dengan path ke ikon SVG Anda */}
-                    <JoinCard title="Tempat Wisata Keluarga" iconSrc="/icons/wisata-keluarga.svg" />
-                    <JoinCard title="Wisata Waterpark" iconSrc="/icons/waterpark.svg" />
-                    <JoinCard title="Taman rekreasi" iconSrc="/icons/taman-rekreasi.svg" />
-                    <JoinCard title="Desa wisata dan agrowisata" iconSrc="/icons/desa-wisata.svg" />
-                    <JoinCard title="Venue atau event" iconSrc="/icons/venue.svg" />
-                    <div className="flex items-center justify-center rounded-2xl bg-white/50 p-8 text-xl font-bold text-purple-500 shadow-lg">
-                        And more...
-                    </div>
-                </div>
-                <button className="transform mt-12 rounded-xl bg-purple-600 py-4 px-10 font-bold text-white shadow-lg transition-transform hover:scale-105 hover:bg-purple-700">
-                    Join Us Now — It's 100% FREE
-                </button>
-            </div>
-        </section>
-    );
-}
+      {/* Konten utama yang berada di atas layer Backgroundbulat.svg */}
+      <div className="container relative z-10 px-4 mx-auto text-center">
+        <h2 className="text-4xl font-bold text-white">Who Should Join?</h2>
+        
+        {/* Mengganti grid 6 kotak teks menjadi grid 6 gambar SVG */}
+        <div className="grid max-w-4xl grid-cols-1 gap-6 mx-auto mt-12 sm:grid-cols-2 lg:grid-cols-3">
+  {[
+    { src: "/images/Tempatwisata.svg", alt: "Tempat Wisata Keluarga", href: "#" },
+    { src: "/images/Wisatawaterpark.svg", alt: "Wisata Waterpark", href: "#" },
+    { src: "/images/Tamanrekreasi.svg", alt: "Taman rekreasi", href: "#" },
+    { src: "/images/Desawisataagro.svg", alt: "Desa wisata dan agrowisata", href: "#" },
+    { src: "/images/Venueevent.svg", alt: "Venue atau event", href: "#" },
+    { src: "/images/Andmoreee.svg", alt: "And more...", href: "#" },
+  ].map((item) => (
+    <a key={item.alt} href={item.href} className="block transition-transform duration-300 hover:scale-105">
+      <Image src={item.src} alt={item.alt} width={300} height={150} className="w-full h-auto" />
+    </a>
+  ))}
+</div>
+        
+        {/* Mengganti tombol Join Us Now dengan gambar SVG */}
+        <div className="flex justify-center mt-12">
+  <a href="#" className="block transition-transform duration-300 hover:scale-105">
+    <Image
+      src="/images/Joinusnow.svg"
+      alt="Join Us Now — It's 100% FREE"
+      width={350}
+      height={60}
+      className="w-full h-auto max-w-sm cursor-pointer"
+    />
+  </a>
+</div>
+      </div>
+    </section>
+  );
+};
+
+export default WhoShouldJoinSection;
