@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 const WhyJoinSection = () => {
   return (
-    <section className="relative py-20">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[2000px] h-[650px] bg-brand-purple opacity-80 blur-3xl rounded-full z-0"></div>
+    <section className="relative pt-40 pb-20"> 
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[2000px] h-[650px] bg-brand-purple opacity-80 blur-2xl rounded-full z-0"></div>
 
       {/* Konten utama yang berada di atas layer ungu */}
       <div className="container relative z-10 px-4 mx-auto text-center">

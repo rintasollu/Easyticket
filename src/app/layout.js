@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <div className="relative min-h-screen overflow-hidden bg-brand-purple-light">
           {/* Elemen untuk gradient utama, akan menutupi seluruh halaman */}
           {/* Untuk gambar 1: Ini adalah gradient ungu muda ke pink/putih di bagian atas */}
-          <div className="absolute top-0 left-0 w-full h-[120vh] bg-gradient-to-br from-[#f3efff] via-[#e5d4f7] to-[#d4c1f0] z-0"></div>
+          <div className="absolute top-0 left-0 w-full h-[900vh] bg-gradient-to-br from-[#f3efff] via-[#e5d4f7] to-[#d4c1f0] z-0"></div>
           
           {/* Elemen lingkaran atau splash warna yang terlihat di gambar */}
           {/* Lingkaran pink di kanan atas */}
