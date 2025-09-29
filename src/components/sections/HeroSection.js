@@ -1,7 +1,7 @@
 // src/components/sections/HeroSection.js
 import Image from 'next/image';
 import { FaTiktok, FaFacebook, FaInstagram } from 'react-icons/fa';
-
+import Link from 'next/link'; // Wajib untuk Next.js Link
 const HeroSection = () => {
   return (
     <section
@@ -13,27 +13,31 @@ const HeroSection = () => {
     {/* KELOMPOK LOGO DI KIRI (Berisi dua tombol Aksi terpisah) */}
     <div className="flex items-center gap-3">
         
-        {/* TOMBOL 1: Logoeasyticket (Untuk kembali ke Halaman Utama) */}
-        <a href="/" aria-label="Kembali ke Halaman Utama" className="transition-transform duration-300 hover:-translate-y-1 hover:scale-105">
-            <Image
-                src="/icons/Logoeasyticket.svg"
-                alt="Easyticket Logo"
-                width={41}
-                height={40}
-            />
-        </a>
-        
-        {/* TOMBOL 2: Logomitra (Untuk navigasi Mitra - asumsikan link-nya '#') */}
-        <a href="#" aria-label="Mitra Easyticket" className="transition-transform duration-300 hover:-translate-y-1 hover:scale-105">
-            <Image
-                src="/icons/Logomitra.svg"
-                alt="Mitra Easyticket"
-                width={122}
-                height={32}
-            />
-        </a>
-    </div>
-
+    {/* KELOMPOK LOGO DI KIRI (Berisi dua tombol Aksi terpisah) */}
+<div className="flex items-center gap-3">
+    
+    {/* TOMBOL 1: Logoeasyticket (Fixed: Menggunakan <Link>) */}
+    <Link href="/" aria-label="Kembali ke Halaman Utama" className="transition-opacity duration-300 hover:opacity-80">
+        {/* Tidak perlu div tambahan di dalam Link ini */}
+        <Image
+            src="/icons/Logoeasyticket.svg"
+            alt="Easyticket Logo"
+            width={41}
+            height={40}
+        />
+    </Link>
+    
+    {/* TOMBOL 2: Logomitra (Tetap <a> karena href='#' bukan navigasi internal) */}
+    <a href="#" aria-label="Mitra Easyticket" className="transition-transform duration-300 hover:-translate-y-1 hover:scale-105">
+        <Image
+            src="/icons/Logomitra.svg"
+            alt="Mitra Easyticket"
+            width={122}
+            height={32}
+        />
+    </a>
+</div>
+</div>
         {/* KELOMPOK IKON DI KANAN */}
         <div className="flex items-center gap-4">
             

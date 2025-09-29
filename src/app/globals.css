@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Definisikan kelas kustom untuk menyembunyikan scrollbar */
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Menyembunyikan Scrollbar di Webkit (Chrome, Safari, Edge) */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
