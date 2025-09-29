@@ -183,7 +183,7 @@ const HeroSection = () => {
         >
     
             {/* Viewport Scrollable Utama (Wajib untuk overflow) */}
-            <div className="w-full overflow-x-auto whitespace-nowrap opacity-3"> 
+            <div className="w-full overflow-x-auto overflow-y-hidden whitespace-nowrap opacity-4 no-scrollbar"> 
             
                 {/* List logo yang disusun horizontal (Flex container) */}
                 <div className="flex gap-2 px-4 py-2"> 
