@@ -3,10 +3,9 @@ import Image from 'next/image';
 import { FaTiktok, FaFacebook, FaInstagram } from 'react-icons/fa';
 import Link from 'next/link'; // Wajib untuk Next.js Link
 const HeroSection = () => {
-  return (
-    <section
-      className="relative w-full px-4 pt-20 pb-40 text-center"
-    >
+    return (
+        <section className="relative w-full px-4 pt-20 pb-40 text-center">
+    
      {/* Header */}
 <header className="absolute top-0 left-0 right-0 flex items-center justify-between p-6 mx-auto max-w-7xl">
     
@@ -75,14 +74,16 @@ const HeroSection = () => {
                 className="hidden w-full h-auto max-w-2xl md:block" // Hidden di mobile, block di MD+
             />
 
-            {/* 2. GAMBAR UNTUK MOBILE (Framegodigital.svg) - Tampil hanya di Mobile */}
-            <Image
-                src="/images/Framegodigital.svg" // Pastikan path ini benar
-                alt="Go digital, boost your ticket sales with easyticket"
-                width={600} // Sesuaikan ukuran untuk mobile
-                height={400} // Sesuaikan ukuran untuk mobile
-                className="block max-w-sm md:hidden **filter blur-sm**" // Block di mobile, hidden di MD+
-            />
+           {/* 2. GAMBAR UNTUK MOBILE (Framegodigital.svg) - Tampil hanya di Mobile */}
+<Image
+    src="/images/Framegodigital.svg" 
+    alt="Go digital, boost your ticket sales with easyticket"
+    // Set width dan height ke nilai yang LEBIH KECIL dan proporsional untuk mobile
+    width={400} 
+    height={300} 
+    // Ganti class: Tambahkan 'w-full' dan hapus 'max-w-sm' yang redundant di sini
+    className="block w-full h-auto mx-auto md:hidden" 
+/>
         </a>
 </div>
       {/* DEKORASI BARU DITAMBAHKAN DI SINI */}
