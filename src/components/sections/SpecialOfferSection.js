@@ -1,49 +1,49 @@
+// src/components/sections/SpecialOfferSection.js
 import Image from 'next/image';
 
 const SpecialOffer = () => {
-    // Array Benefits DENGAN PERBAIKAN ENTITAS
+    // Array Benefits DENGAN PERBAIKAN ENTITAS DAN TRANSFORMASI KE MD:
     const offers = [
         { 
             src: 'Garansi100.svg', 
             alt: 'Garansi 100 tiket pertama terjual', 
             width: 343, height: 53, 
-            className: '-rotate-1 -translate-x-4',
+            className: 'md:-rotate-1 md:-translate-x-4', // DITAMBAH MD:
             href: '#'
         },
         { 
             src: 'Bebasbiaya.svg', 
             alt: 'Bebas biaya registrasi & bebas platform fee selama 3 bulan pertama', 
             width: 661, height: 53, 
-            className: 'rotate-1 -translate-x-4',
+            className: 'md:rotate-1 md:-translate-x-4', // DITAMBAH MD:
             href: '#'
         },
         { 
             src: 'Gratismateri.svg', 
             alt: 'Gratis materi promosi: poster, video, dan konten sosial media', 
             width: 594, height: 53, 
-            className: '-rotate-1 -translate-x-4',
+            className: 'md:-rotate-1 md:-translate-x-4', // DITAMBAH MD:
             href: '#'
         },
         { 
             src: 'Freetraining.svg', 
             alt: 'Free training & akses dashboard pengelolaan tiket dan data pengunjung', 
             width: 466, height: 53, 
-            className: '-rotate-1 -translate-x-2',
+            className: 'md:-rotate-1 md:-translate-x-2', // DITAMBAH MD:
             href: '#'
         },
         { 
             src: 'Danacepat.svg', 
             alt: 'Dana cepat cair ke rekening (maks. 3 hari kerja)', 
             width: 619, height: 53, 
-            className: 'rotate-1 -translate-x-3',
+            className: 'md:rotate-1 md:-translate-x-3', // DITAMBAH MD:
             href: '#'
         },
         { 
             src: 'Jangkauanluas.svg', 
-            // PERBAIKAN ENTITAS: Menggunakan &mdash; di Alt Text
             alt: 'Jangkauan lebih luas &mdash; tampil di platform & promosi EasyTicket', 
             width: 600, height: 53, 
-            className: '-rotate-1 -translate-x-5',
+            className: 'md:-rotate-1 md:-translate-x-5', // DITAMBAH MD:
             href: '#'
         },
     ];
@@ -70,14 +70,16 @@ const SpecialOffer = () => {
                         <a 
                             key={index} 
                             href={benefit.href}
-                            className={`relative flex justify-center transition-transform duration-300 hover:scale-105 ${benefit.className}`}
+                            // PERBAIKAN: Tambahkan w-full dan mx-auto untuk pemusatan responsif
+                            className={`relative flex justify-center mx-auto w-full transition-transform duration-300 hover:scale-105 ${benefit.className}`}
                         >
                             <Image
                                 src={`/images/${benefit.src}`}
                                 alt={benefit.alt}
+                                // Gambar akan menggunakan dimensi ini tetapi diizinkan untuk dikecilkan/dilebarkan
                                 width={benefit.width}
                                 height={benefit.height}
-                                className="object-contain"
+                                className="object-contain w-full h-auto max-w-sm" // Membuat gambar responsif dan batas maks mobile
                             />
                         </a>
                     ))}

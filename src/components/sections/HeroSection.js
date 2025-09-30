@@ -113,7 +113,7 @@ const HeroSection = () => {
     
     {/* 1. VERSI DESKTOP (MD KE ATAS): CSS Backdrop-blur + Logo Asli */}
     {/* Disembunyikan di mobile (hidden), ditampilkan di md ke atas (md:inline-block) */}
-    <div className="relative hidden px-8 py-4 rounded-full shadow-lg md:inline-block bg-white/40 backdrop-blur-sm">
+    <div className="relative hidden px-8 py-2 rounded-full shadow-lg md:inline-block bg-white/40 backdrop-blur-sm">
         
         {/* Label Trusted By (Desktop) */}
         <div className="absolute top-0 translate-x-4 -translate-y-1/2 left-1">
