@@ -40,7 +40,9 @@ const Footer = () => {
             <div className="relative z-10">
                 <div className="py-16 text-center bg-transparent">
                     <h2 className="text-3xl font-bold">Need Help or Want to Talk First</h2>
-                    <p className="mt-2 opacity-80">"Contact our merchant team anytime."</p>
+                    <p className="mt-2 opacity-80">
+  &quot;Contact our merchant team anytime.&quot;
+</p>
                     
                     {/* AREA TOMBOL KONTAK BARU */}
                     <div className="flex flex-col items-center justify-center gap-4 mt-8 sm:flex-row">
