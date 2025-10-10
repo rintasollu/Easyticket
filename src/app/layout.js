@@ -1,5 +1,12 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+// Tambahkan impor font di file layout.js atau _app.js
+import { DM_Sans } from 'next/font/google';
+
+const dmSans = DM_Sans({
+    subsets: ['latin'],
+    weight: ['400', '500', '700'],
+});
 
 const poppins = Poppins({
   subsets: ["latin"],

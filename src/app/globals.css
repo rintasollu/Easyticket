@@ -11,3 +11,50 @@
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
 }
+/* src/app/globals.css atau lokasi CSS global Anda */
+
+.chat-bubble-left::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -8px; /* Sesuaikan jarak ekor dari bubble */
+    width: 16px; /* Lebar ekor */
+    height: 16px; /* Tinggi ekor */
+    background: #F3EDFF; /* Warna background bubble */
+    border-bottom: 1px solid #362063; /* Border bubble */
+    border-left: 1px solid #362063; /* Border bubble */
+    transform: translateY(-50%) rotate(45deg);
+    z-index: 1; /* Pastikan ekor di bawah bubble utama jika perlu */
+  }
+  /* Tambahkan ini ke src/app/globals.css atau file CSS global Anda */
+
+/* Tambahkan ini ke src/app/globals.css atau file CSS global Anda */
+
+.mitra-bubble {
+    position: relative;
+    /* Menggunakan Z-index untuk memastikan bubble berada di atas konten lain jika tumpang tindih */
+    z-index: 10; 
+    /* Styling background dan border */
+    background: linear-gradient(180deg, #F3EDFF 0%, #EADFFF 50%, #F3EDFF 100%);
+    border: 1px solid #362063;
+  }
+  
+  /* Ekor Bubble Chat (di sebelah kiri) */
+  .mitra-bubble::before {
+    content: '';
+    position: absolute;
+    /* Posisi ekor di sisi kiri */
+    left: -8px; 
+    top: 50%;
+    /* Ukuran dan bentuk kotak yang diputar */
+    width: 14px;
+    height: 14px;
+    /* Warna dan border yang sama dengan bubble utama */
+    background: #EADFFF; /* Menggunakan warna yang sama dengan bagian tengah gradien */
+    border-bottom: 1px solid #362063;
+    border-left: 1px solid #362063;
+    /* Memutar kotak untuk membentuk segitiga (ekor) */
+    transform: translateY(-50%) rotate(45deg);
+    /* Memastikan ekor berada di bawah bubble utama */
+    z-index: 1; 
+  }
